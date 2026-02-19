@@ -15,19 +15,18 @@ h1, h2, h3, h4, h5, p {
 	cursor: default;
 }
 
-
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 
 body {
 	margin: 0px;
 	background-color: #ffffff;
 	overflow-x: hidden;
 	font-family: 'Montserrat';
-	color: 	#A0A09f;
-}
-
-P {
-	color: #605E5E;
-	text-align: justify;
+	color: 	#303030;
 }
 
 @font-face {
@@ -37,288 +36,62 @@ P {
 	font-style: normal;
 }
 
-.banner {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	flex-direction: column;
-	height: 100vh;
-	width: 100%;
-}
+
+/* ----------------------------------------------------------------------------- */
 
 
-#banner {
-	height: 65vh;
-	width: 100%;
-	object-fit: cover;
-}
-
-#em {
-	height: 55vh;
-	position: absolute;
-	bottom: 19vh;
-	padding: 5vh 0;
-	image-rendering: auto;
-}
-
-.facebook {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-evenly;
-	width: 100%;
-	margin: 0;
-}
-
-.facebook img {
-	border: #ffffff 10px;
-}
-
-.facebook hr {
-	margin: 0 1vw;
-}
-
-.hr {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-evenly;
-	width: 100%;
-	margin: 5vw 0;
-}
-
-.hr hr {
-	margin: 0 1vw;
-}
-
-
-
-.centerColumn {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 0 18vw;
-}
-
-.centerRow {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	padding: 0 18vw;
-}
-
-
-
-
-
-
-
-/* WORK */
-h3 {
-  background: #000;
-  color: #fff;
-  padding: 10px 20px;
-  display: inline-block;
-}
-
-.box {
-  background: #000;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-  width: fit-content;
-  margin: 1rem 0;
-}
-
-/* options (unused but preserved) */
-.options {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s ease;
-}
-
-.options.open {
-  max-height: 200px;
-}
-
-.options button {
-  display: block;
-  width: 100%;
-  margin-top: 5px;
-}
-
-/* Panel (collapsed / open) */
-.panel {
-  overflow: hidden;
-  max-height: 0;
-  width: 60vw;
-  padding: 0 15px;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-  background: transparent;
-  color: #fff;
+header {
+  background-color: #161413;
+  height: 80px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  padding: 0 40px;
+  margin-bottom: 40px;
 }
 
-.panel.open {
-  max-height: 1000px; /* allow expansion */
-  padding: 15px;
+#logo {
+  height: 100%;
+  max-height: 50px;
+  width: auto;
 }
 
-.panel p {
-  margin-bottom: 10vh;
-  padding: 0 13vh 0 13vh;
+main {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 60px 20px;
+  padding: 20px;
 }
 
-/* Gallery thumbnails */
-.gallery {
-  display: flex;
-  flex-direction: column;
-  width: 7vw;
-  overflow-y: auto;
-  height: 35vw;
-  margin-right: 15px;
-}
 
-.gallery img {
-  padding: 0 0.2vh 1.3vh 0;
+
+article {
+  width: 250px;
+  box-sizing: border-box;
   cursor: pointer;
-  max-width: 100%;
-  display: block;
+  transition: 0.3s ease;
 }
 
-/* Viewer main image */
-
-.viewer {
-	position: relative; /* needed for absolute positioning of overlay */
-  	display: inline-block;
+article:hover {
+  transform: scale(1.02);
 }
 
-.viewer img {
-  width: 35vw;
-  height: auto;
+
+article img {
+  width: 100%;
+  max-height: 250px;
   object-fit: cover;
-  margin-left: 0;
-  margin-bottom: 15px;
-  opacity: 1;
-  transition: opacity 0.2s ease;
+  display: block;
 
-  display: block; 
+  background-color: #f5f5f5;
+  margin-bottom: 12px;
 }
 
-.viewer img.fade-out {
-  opacity: 0;
+article h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: justify;
 }
-
-
-
-
-
-
-/* TEST W ME */
-
-.overlay {
-  position: relative;
-  bottom: 95px;
-  width: 35vw;
-  background-color: #292929; /* rgba(129, 129, 129, 0.5);  50% grey transparent */
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  margin-right: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.viewer:hover .overlay {
-  opacity: 0.5;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-	height: 40vh;
-}
-
-#madeBy {
-	display: flex;
-  	justify-content: center;
-	padding-bottom: 1vh;
-	margin: 0px;
-	font-size: 0.7em;
-}
-
-
-
-
-/* ------------------------------------------------------------ */
-
-
-
-/* Desktop */
-@media (max-width: 1440px) {
-
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-
-}
-
-/* Phone */
-@media (max-width: 600px) {
-
-
-}
-
-
-/* ------------------------------------------------------------ */
-
-
-
-
-
-/* Chrome, Edge, Safari */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cfcfcf;
-  border-radius: 2px;
-  transition: 1s;
-  box-shadow: inset 2px 0 0 #fff, inset -2px 0 0 #fff; /* left and right space */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #bebebe;
-  transition: 1s;
-}
-
-
 
